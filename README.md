@@ -1,6 +1,6 @@
 # Crime Prediction in San Francisco
 
-![time-lapse-video-San-Francisco](C:\Users\Work\Documents\Crime-Prediction-in-San-Francisco\images\time-lapse-video-San-Francisco.jpg)
+![](https://github.com/fescobar96/Crime-Prediction-in-San-Francisco/blob/master/images/time-lapse-video-San-Francisco.jpg?raw=true)
 
 ## Introduction
 
@@ -50,31 +50,31 @@ Source: Scraped from https://wunderground.com/
 
 ##### Crimes by Year
 
-![crimes per year](C:\Users\Work\Documents\Crime-Prediction-in-San-Francisco\images\crimes per year.png)
+![crimes per year](https://github.com/fescobar96/Crime-Prediction-in-San-Francisco/blob/master/images/crimes%20per%20year.png?raw=true)
 
 ##### Crimes by Day of the Week
 
-![crimes by day of the week](C:\Users\Work\Documents\Crime-Prediction-in-San-Francisco\images\crimes by day of the week.png)
+![crimes by day of the week](https://github.com/fescobar96/Crime-Prediction-in-San-Francisco/blob/master/images/crimes%20by%20day%20of%20the%20week.png?raw=true)
 
 ##### Crimes by Hour
 
-![crimes per hour](C:\Users\Work\Documents\Crime-Prediction-in-San-Francisco\images\crimes per hour.png)
+![crimes per hour](https://github.com/fescobar96/Crime-Prediction-in-San-Francisco/blob/master/images/crimes%20per%20hour.png?raw=true)
 
 
 
 ##### Crimes by Category
 
-![crimes by category](C:\Users\Work\Documents\Crime-Prediction-in-San-Francisco\images\crimes by category.png)
+![crimes by category](https://github.com/fescobar96/Crime-Prediction-in-San-Francisco/blob/master/images/crimes%20by%20category.png?raw=true)
 
 
 
 ##### Crimes by Police Department District - Bar Chart
 
-![crimes by police department](C:\Users\Work\Documents\Crime-Prediction-in-San-Francisco\images\crimes by police department.png)
+![crimes by police department](https://github.com/fescobar96/Crime-Prediction-in-San-Francisco/blob/master/images/crimes%20by%20police%20department.png?raw=true)
 
 ##### Crimes by Police Department District - Map
 
-![labeled cumulative](C:\Users\Work\Documents\Crime-Prediction-in-San-Francisco\images\labeled cumulative.png)
+![labeled cumulative](https://github.com/fescobar96/Crime-Prediction-in-San-Francisco/blob/master/images/labeled%20cumulative.png?raw=true)
 
 The plot above is a visual representation of the crime count for each Police Department District in San Francisco where the darker colors denote a greater crime count.
 
@@ -96,11 +96,11 @@ The plot above is a visual representation of the crime count for each Police Dep
 
 ##### Crimes Resolutions
 
-![crime resolutions](C:\Users\Work\Documents\Crime-Prediction-in-San-Francisco\images\crime resolutions.png)
+![crime resolutions](https://github.com/fescobar96/Crime-Prediction-in-San-Francisco/blob/master/images/crime%20resolutions.png?raw=true)
 
 ##### Yearly Average Temperature
 
-![yearly temperature](C:\Users\Work\Documents\Crime-Prediction-in-San-Francisco\images\yearly temperature.png)
+![yearly temperature](https://github.com/fescobar96/Crime-Prediction-in-San-Francisco/blob/master/images/yearly%20temperature.png?raw=true)
 
 
 
