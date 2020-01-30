@@ -109,7 +109,19 @@ The plot above is a visual representation of the crime count for each Police Dep
 
 ![](https://github.com/fescobar96/Crime-Prediction-in-San-Francisco/blob/master/images/daily%20crimes%20vs%20day%20of%20month.png?raw=true)
 
+#### Comparison of Crime Between NFL Game Day and Regular Day
 
+![](https://github.com/fescobar96/Crime-Prediction-in-San-Francisco/blob/master/images/game%20day%20vs%20regular%20day.png?raw=true)
+
+#### Comparison of Crime Between NFL Home Game and Away Game
+
+![](https://github.com/fescobar96/Crime-Prediction-in-San-Francisco/blob/master/images/home%20game%20vs%20away%20game.png?raw=true)
+
+
+
+#### Comparison of Crime Between NFL Win and Loss
+
+![](https://github.com/fescobar96/Crime-Prediction-in-San-Francisco/blob/master/images/nfl%20win%20vs%20loss.png?raw=true)
 
 
 
