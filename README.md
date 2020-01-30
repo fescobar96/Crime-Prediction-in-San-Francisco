@@ -87,9 +87,21 @@ The plot above is a visual representation of the crime count for each Police Dep
 
 ![crime resolutions](https://github.com/fescobar96/Crime-Prediction-in-San-Francisco/blob/master/images/crime%20resolutions.png?raw=true)
 
-##### Yearly Average Temperature
+##### Correlation Matrix
 
-![yearly temperature](https://github.com/fescobar96/Crime-Prediction-in-San-Francisco/blob/master/images/yearly%20temperature.png?raw=true)
+![](https://github.com/fescobar96/Crime-Prediction-in-San-Francisco/blob/master/images/correlation%20matrix.png?raw=true)
+
+
+
+##### **Mean Daily Crimes vs. Mean Daily Temperature**
+
+![](https://github.com/fescobar96/Crime-Prediction-in-San-Francisco/blob/master/images/daily%20crimes%20vs%20temperature.png?raw=true)
+
+
+
+#####  **Average Crimes vs. Day of Month**
+
+![](https://github.com/fescobar96/Crime-Prediction-in-San-Francisco/blob/master/images/daily%20crimes%20vs%20day%20of%20month.png?raw=true)
 
 
 
