@@ -1,4 +1,4 @@
-# Crime Prediction in San Francisco
+# Crime Rates Prediction in San Francisco
 
 ![](https://github.com/fescobar96/Crime-Prediction-in-San-Francisco/blob/master/images/time-lapse-video-San-Francisco.jpg?raw=true)
 
@@ -11,6 +11,8 @@
 ## Introduction
 
 San Francisco's economy is continuously improving, but its wealth seems to be heavily undistributed; situation that has driven the crime rates higher than the nation average.
+
+
 
 
 ## Libraries
@@ -94,6 +96,14 @@ The plot above represents the cumulative crimes per year. It is important to men
 
 
 
+####  Mean Daily Crimes vs. Day of Month
+
+![](https://github.com/fescobar96/Crime-Prediction-in-San-Francisco/blob/master/images/daily%20crimes%20vs%20day%20of%20month.png?raw=true)
+
+Explain relationship with wellfare and ss checks...
+
+
+
 #### Crimes by Day of the Week
 
 ![crimes by day of the week](https://github.com/fescobar96/Crime-Prediction-in-San-Francisco/blob/master/images/crimes%20by%20day%20of%20the%20week.png?raw=true)
@@ -114,11 +124,17 @@ The hour of the day also plays an important role when trying to predict crimes r
 
 ![crimes by category](https://github.com/fescobar96/Crime-Prediction-in-San-Francisco/blob/master/images/crimes%20by%20category.png?raw=true)
 
+explain why not including category as feature
+
 
 
 #### Crimes by Police Department District - Bar Chart
 
 ![crimes by police department](https://github.com/fescobar96/Crime-Prediction-in-San-Francisco/blob/master/images/crimes%20by%20police%20department.png?raw=true)
+
+target variable, explain it in detail
+
+
 
 #### Crimes by Police Department District - Map
 
@@ -126,15 +142,27 @@ The hour of the day also plays an important role when trying to predict crimes r
 
 The plot above is a visual representation of the crime count for each Police Department District in San Francisco where the darker colors denote a greater crime count.
 
+target variable, explain it in detail
+
+add interactive plot
+
 
 
 #### Crimes Resolutions
 
 ![crime resolutions](https://github.com/fescobar96/Crime-Prediction-in-San-Francisco/blob/master/images/crime%20resolutions.png?raw=true)
 
+explain why discarded this as a feature
+
+
+
 #### Correlation Matrix
 
 ![](https://github.com/fescobar96/Crime-Prediction-in-San-Francisco/blob/master/images/correlation%20matrix.png?raw=true)
+
+
+
+explain main correlation with avg_temp, possible theories?
 
 
 
@@ -144,17 +172,23 @@ The plot above is a visual representation of the crime count for each Police Dep
 
 
 
-####  Mean Daily Crimes vs. Day of Month
+explain correlation
 
-![](https://github.com/fescobar96/Crime-Prediction-in-San-Francisco/blob/master/images/daily%20crimes%20vs%20day%20of%20month.png?raw=true)
+
 
 #### Comparison of Crime Between NFL Game Day and Regular Day
 
 ![](https://github.com/fescobar96/Crime-Prediction-in-San-Francisco/blob/master/images/game%20day%20vs%20regular%20day.png?raw=true)
 
+explain possible reasons of this imbalance
+
+
+
 #### Comparison of Crime Between NFL Home Game and Away Game
 
 ![](https://github.com/fescobar96/Crime-Prediction-in-San-Francisco/blob/master/images/home%20game%20vs%20away%20game.png?raw=true)
+
+not significant difference
 
 
 
@@ -162,13 +196,17 @@ The plot above is a visual representation of the crime count for each Police Dep
 
 ![](https://github.com/fescobar96/Crime-Prediction-in-San-Francisco/blob/master/images/nfl%20win%20vs%20loss.png?raw=true)
 
+not significant difference
+
 
 
 ## Machine Learning
 
-- xgboost regressor
-
 #### Model
+
+regression, xgboost, talk about features
+
+
 
 #### Hyperparameter Optimization
 
@@ -182,23 +220,34 @@ talk about hyperparameter optimization using gridsearchcv
 | gamma            | [0, 0.1, 0.2, 0.3, 0.4]              |
 | colsample_bytree | [0.3, 0.4, 0.5, 0.7]                 |
 
+
+
 #### Score
 
+| Dataset  | R^2 |
+|----------|-----|
+| Training | ??  |
+| Test     | ??  |
 
 
-- training score
-- test score
-- MAE
+
+#### Mean Absolute Error
 
 
 
 ## Limitations and Issues
 
-- Not all crimes can be predicted
-- Racial profiling
-- Neighborhood bias
-- Crime displacement
-- Privacy and constitutional concerns
+Expand on following issues:
+
+#### Not all crimes can be predicted
+
+#### Racial profiling
+
+#### Neighborhood bias
+
+#### Crime displacement
+
+#### Privacy and constitutional concerns
 
 
 
