@@ -2,6 +2,12 @@
 
 ![](https://github.com/fescobar96/Crime-Prediction-in-San-Francisco/blob/master/images/time-lapse-video-San-Francisco.jpg?raw=true)
 
+
+
+## Table of Contents
+
+[TOC]
+
 ## Introduction
 
 San Francisco's economy is continuously improving, but its wealth seems to be heavily undistributed; situation that has driven the crime rates higher than the nation average.
@@ -132,7 +138,7 @@ The plot above is a visual representation of the crime count for each Police Dep
 
 
 
-#### **Mean Daily Crimes vs. Mean Daily Temperature**
+#### Mean Daily Crimes vs. Mean Daily Temperature
 
 ![](https://github.com/fescobar96/Crime-Prediction-in-San-Francisco/blob/master/images/daily%20crimes%20vs%20temperature.png?raw=true)
 
@@ -158,10 +164,28 @@ The plot above is a visual representation of the crime count for each Police Dep
 
 
 
-## Machine Learning Model
+## Machine Learning
 
 - xgboost regressor
-- gridsearchvc parameters
+
+#### Model
+
+#### Hyperparameter Optimization
+
+talk about hyperparameter optimization using gridsearchcv
+
+| Parameters       | List of Values                       |
+| ---------------- | ------------------------------------ |
+| learning_rate    | [0.05, 0.10, 0.15, 0.20, 0.25, 0.30] |
+| max_depth        | [3, 4, 5, 6, 8, 10, 12, 15]          |
+| min_child_weight | [1, 3, 5, 7]                         |
+| gamma            | [0, 0.1, 0.2, 0.3, 0.4]              |
+| colsample_bytree | [0.3, 0.4, 0.5, 0.7]                 |
+
+#### Score
+
+
+
 - training score
 - test score
 - MAE
