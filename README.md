@@ -4,14 +4,37 @@
 
 ## Introduction
 
+San Francisco's economy is continuously improving, but its wealth seems to be heavily undistributed; situation that has driven the crime rates higher than the nation average.
+
 
 ## Libraries
-* Scikit-learn 0.22.1
-* NumPy 1.17.5
-* Pandas 0.25.3
+* BeautifulSoup 4.6.3
+
+* Branca 0.3.1
+
+* Folium 0.8.3
+
+* GeoPandas 0.6.2
+
 * Matplotlib 3.1.2
-* Seaborn 0.9.0
+
+* NumPy 1.17.5
+
+* Pandas 0.25.3
+
+* Requests 2.21.0
+
+* Scikit-learn 0.22.1
+
 * SciPy 1.4.1
+
+* Seaborn 0.9.0
+
+* Shapely 1.6.4
+
+* XGBoost 0.90
+
+  
 
 
 
@@ -45,7 +68,7 @@ Source: Scraped from https://wunderground.com/
 
 
 
-**`San Francisco 49ers Game Schedule`** - Collected data for San Francisco 49ers game between seasons *2003* and *2014*. The schedule for *Season 2015* was not include because it starts in Fall and the *San Francisco Crime Classification Dataset* ends in *05/13/2015*. It contains xx records.
+**`San Francisco 49ers Game Schedule`** - Collected data for San Francisco 49ers game between seasons *2003* and *2014*. The schedule for *Season 2015* was not include because it starts in Fall and the *San Francisco Crime Classification Dataset* ends in *05/13/2015*. It contains 200 records.
 
 - **`Date`** - Date of game
 - **`Output`** - Whether the 49ers won or lost the game ("W", "L")
@@ -57,17 +80,27 @@ Source: Collected from https://www.pro-football-reference.com/
 
 ## Exploratory Data Analysis
 
-#### Crimes by Year
+#### Crimes per Year
 
 ![crimes per year](https://github.com/fescobar96/Crime-Prediction-in-San-Francisco/blob/master/images/crimes%20per%20year.png?raw=true)
+
+The plot above represents the cumulative crimes per year. It is important to mention that the San Francisco Crime Classification Dataset only included crime records up to May 13, 2015; this is why the yearly crime rate seems to suddenly improved in 2015, when in reality we are just missing data for most of that year.
+
+
 
 #### Crimes by Day of the Week
 
 ![crimes by day of the week](https://github.com/fescobar96/Crime-Prediction-in-San-Francisco/blob/master/images/crimes%20by%20day%20of%20the%20week.png?raw=true)
 
-#### Crimes by Hour
+Crimes rates vary between days of the week, being Friday the day in which most crimes are committed on average while Sunday has the lowest crime rates of all days of the week. Please note that although the variations of crime rates between different days of the week seems to be relatively small, the day of the week plays an important role in improving our model's accuracy.
+
+
+
+#### Average Crimes per Hour
 
 ![crimes per hour](https://github.com/fescobar96/Crime-Prediction-in-San-Francisco/blob/master/images/crimes%20per%20hour.png?raw=true)
+
+The hour of the day also plays an important role when trying to predict crimes rates. You can appreciate how 4:00am - 5:00am have the lowest crime rates. As we increase the hour, the crime rates increase on average until we reach 5:00pm. After 6:00pm, crime rates tend to decrease until 4:00am where the cycle repeats. Although the hour of the day is relevant to the predictions of the model, I decided not to use it as a feature because the dataset would suffer a significant reduction due to the fact that many hours of the day lack crime records. Additionally, having the crime records in a daily is consistent with the weather and football datasets.
 
 
 
@@ -126,6 +159,12 @@ The plot above is a visual representation of the crime count for each Police Dep
 
 
 ## Machine Learning Model
+
+- xgboost regressor
+- gridsearchvc parameters
+- training score
+- test score
+- MAE
 
 
 
