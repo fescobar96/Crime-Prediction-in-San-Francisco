@@ -83,21 +83,6 @@ The plot above is a visual representation of the crime count for each Police Dep
 
 
 
-**Legend:**
-
-1. *Richmond*
-2. *Taraval*
-3. *Park*
-4. *Ingleside*
-5. *Northern*
-6. *Mission*
-7. *Central*
-8. *Tenderloin*
-9. *Southern*
-10. *Bayview*
-
-
-
 ##### Crimes Resolutions
 
 ![crime resolutions](https://github.com/fescobar96/Crime-Prediction-in-San-Francisco/blob/master/images/crime%20resolutions.png?raw=true)
