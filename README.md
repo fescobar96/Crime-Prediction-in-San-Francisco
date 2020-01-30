@@ -6,7 +6,6 @@
 
 
 ## Libraries
-* Python 3
 * Scikit-learn 0.22.1
 * NumPy 1.17.5
 * Pandas 0.25.3
@@ -16,12 +15,12 @@
 
 
 
-## Dataset Overview
+## Data Overview
 
 - **`San Francisco Crime Classification Dataset`** - This dataset contains the reported crimes that occurred in San Francisco from *01/01/2003* to *05/13/2015*. It has *878,049* records.
-  - **`Date & Time`** - Timestamp of the crime incident
+- **`Date & Time`** - Timestamp of the crime incident
   - **`Category`** - Category of the crime incident
-  - **`Description`** - Detailed description of the crime incident
+- **`Description`** - Detailed description of the crime incident
   - **`Day of the Week`** - The day of the week
   - **`Police Department District`** - Name of the Police Department District
   - **`Resolution`** - How the crime incident was resolved
@@ -43,6 +42,10 @@ Source: https://www.kaggle.com/c/sf-crime/data
 - **`moon_illumination, %`** - Moon phase and illumination *(Name of phase, %)*
 
 Source: Scraped from https://wunderground.com/
+
+## Data Preprocessing
+
+##### Missing Values
 
 
 
@@ -74,7 +77,7 @@ Source: Scraped from https://wunderground.com/
 
 ##### Crimes by Police Department District - Map
 
-![labeled cumulative](https://github.com/fescobar96/Crime-Prediction-in-San-Francisco/blob/master/images/labeled%20cumulative.png?raw=true)
+![labeled cumulative](https://github.com/fescobar96/Crime-Prediction-in-San-Francisco/blob/master/images/Cumulative%20Crime%20Map%20labeled.png?raw=true)
 
 The plot above is a visual representation of the crime count for each Police Department District in San Francisco where the darker colors denote a greater crime count.
 
@@ -89,8 +92,9 @@ The plot above is a visual representation of the crime count for each Police Dep
 5. *Northern*
 6. *Mission*
 7. *Central*
-8. *Southern*
-9. *Bayview*
+8. *Tenderloin*
+9. *Southern*
+10. *Bayview*
 
 
 
