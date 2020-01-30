@@ -32,7 +32,7 @@ Source: https://www.kaggle.com/c/sf-crime/data
 
 
 
-**`San Francisco Weather Dataset`** - Scraped weather data for every day in the *San Francisco Crime Classification Dataset*. It contains 4516 records.
+**`San Francisco Weather Dataset`** - Scraped weather data for every day in the *San Francisco Crime Classification Dataset*. It contains *4516* records.
 
 - **`date`** - Date of recorded data
 - **`avg_temp`** - Average temperature *(Celsius)*
@@ -43,63 +43,69 @@ Source: https://www.kaggle.com/c/sf-crime/data
 
 Source: Scraped from https://wunderground.com/
 
-## Data Preprocessing
 
-##### Missing Values
+
+**`San Francisco 49ers Game Schedule`** - Collected data for San Francisco 49ers game between seasons *2003* and *2014*. The schedule for *Season 2015* was not include because it starts in Fall and the *San Francisco Crime Classification Dataset* ends in *05/13/2015*. It contains xx records.
+
+- **`Date`** - Date of game
+- **`Output`** - Whether the 49ers won or lost the game ("W", "L")
+- **`Home`** - Whether the 49ers played home or away (1 = Home, 0 = Away)
+
+Source: Collected from https://www.pro-football-reference.com/
 
 
 
 ## Exploratory Data Analysis
 
-##### Crimes by Year
+#### Crimes by Year
 
 ![crimes per year](https://github.com/fescobar96/Crime-Prediction-in-San-Francisco/blob/master/images/crimes%20per%20year.png?raw=true)
 
-##### Crimes by Day of the Week
+#### Crimes by Day of the Week
 
 ![crimes by day of the week](https://github.com/fescobar96/Crime-Prediction-in-San-Francisco/blob/master/images/crimes%20by%20day%20of%20the%20week.png?raw=true)
 
-##### Crimes by Hour
+#### Crimes by Hour
 
 ![crimes per hour](https://github.com/fescobar96/Crime-Prediction-in-San-Francisco/blob/master/images/crimes%20per%20hour.png?raw=true)
 
 
 
-##### Crimes by Category
+#### Crimes by Category
 
 ![crimes by category](https://github.com/fescobar96/Crime-Prediction-in-San-Francisco/blob/master/images/crimes%20by%20category.png?raw=true)
 
 
 
-##### Crimes by Police Department District - Bar Chart
+#### Crimes by Police Department District - Bar Chart
 
 ![crimes by police department](https://github.com/fescobar96/Crime-Prediction-in-San-Francisco/blob/master/images/crimes%20by%20police%20department.png?raw=true)
 
-##### Crimes by Police Department District - Map
+#### Crimes by Police Department District - Map
 
-![labeled cumulative](https://github.com/fescobar96/Crime-Prediction-in-San-Francisco/blob/master/images/Cumulative%20Crime%20Map%20labeled.png?raw=true)
+![](https://github.com/fescobar96/Crime-Prediction-in-San-Francisco/blob/master/images/Cumulative%20Crime%20Map%20labeled.png?raw=true)
 
 The plot above is a visual representation of the crime count for each Police Department District in San Francisco where the darker colors denote a greater crime count.
 
 
 
-##### Crimes Resolutions
+#### Crimes Resolutions
 
 ![crime resolutions](https://github.com/fescobar96/Crime-Prediction-in-San-Francisco/blob/master/images/crime%20resolutions.png?raw=true)
 
-##### Correlation Matrix
+#### Correlation Matrix
 
 ![](https://github.com/fescobar96/Crime-Prediction-in-San-Francisco/blob/master/images/correlation%20matrix.png?raw=true)
 
 
 
-##### **Mean Daily Crimes vs. Mean Daily Temperature**
+#### **Mean Daily Crimes vs. Mean Daily Temperature**
 
 ![](https://github.com/fescobar96/Crime-Prediction-in-San-Francisco/blob/master/images/daily%20crimes%20vs%20temperature.png?raw=true)
 
 
 
-#####  **Average Crimes vs. Day of Month**
+####  Mean Daily Crimes vs. Day of Month
 
 ![](https://github.com/fescobar96/Crime-Prediction-in-San-Francisco/blob/master/images/daily%20crimes%20vs%20day%20of%20month.png?raw=true)
 
