@@ -6,7 +6,7 @@
 
 ## Table of Contents
 
-
+table of contents here
 
 ## Introduction
 
@@ -15,6 +15,8 @@ San Francisco's economy is continuously growing, but its wealth seems to be heav
 Law enforcement in San Francisco is facing an optimization problem where it has relatively few resources to take care of a big area. The purpose of this project is to build machine learning models that can aid law enforcement in better distributing the resources across different police department districts.
 
 The final model implements the most predictive features from 3 different datasets with the primary objective of predicting the number of crimes for each police department district in San Francisco for any given date. 
+
+------
 
 
 
@@ -33,7 +35,7 @@ The final model implements the most predictive features from 3 different dataset
 
 Source: https://www.kaggle.com/c/sf-crime/data
 
-
+------
 
 **`San Francisco Weather Dataset`** - Scraped weather data for every day in the *San Francisco Crime Classification Dataset*. It contains *4516* records.
 
@@ -46,7 +48,7 @@ Source: https://www.kaggle.com/c/sf-crime/data
 
 Source: Scraped from https://wunderground.com/
 
-
+------
 
 **`San Francisco 49ers Game Schedule`** - Collected data for the San Francisco 49ers game between seasons *2003* and *2014*. The schedule for *Season 2015* was not included because it starts in Fall, and the *San Francisco Crime Classification Dataset* ends on *05/13/2015*. It contains 200 records.
 
@@ -55,6 +57,8 @@ Source: Scraped from https://wunderground.com/
 - **`Home`** - Whether the 49ers played home or away (1 = Home, 0 = Away)
 
 Source: Collected from https://www.pro-football-reference.com/
+
+------
 
 
 
@@ -66,6 +70,8 @@ Source: Collected from https://www.pro-football-reference.com/
 
 The plot above represents the cumulative crimes per year. It is essential to mention that the San Francisco Crime Classification Dataset only included crime records up to May 13, 2015; this is why the yearly crime rate seems to suddenly improve in 2015 when in reality, we are just missing data for most of that year.
 
+------
+
 
 
 ####  Average Daily Crimes vs. Day of Month
@@ -73,6 +79,8 @@ The plot above represents the cumulative crimes per year. It is essential to men
 ![](https://github.com/fescobar96/Crime-Prediction-in-San-Francisco/blob/master/images/daily%20crimes%20vs%20day%20of%20month.png?raw=true)
 
 During the exploratory data analysis, an interesting finding was that the first day tends to have crime rates xx% higher than the monthly average. The reason behind this pattern could be something as simple as this being how police in San Francisco file crime reports. Another possible cause could be that the U.S. government tends to pay Supplemental Security Income and Welfare checks on the first day of every month, potentially increasing the number of robbery targets.
+
+------
 
 
 
@@ -82,6 +90,8 @@ During the exploratory data analysis, an interesting finding was that the first 
 
 Crimes rates vary between days of the week, being Friday the day in which most crimes are committed on average while Sunday has the lowest crime rates of all days of the week. Please note that although the variations of crime rates between different days of the week seem to be relatively small, the day of the week plays a vital role in improving our model's accuracy.
 
+------
+
 
 
 #### Average Crimes per Hour
@@ -89,6 +99,8 @@ Crimes rates vary between days of the week, being Friday the day in which most c
 ![crimes per hour](https://github.com/fescobar96/Crime-Prediction-in-San-Francisco/blob/master/images/crimes%20per%20hour.png?raw=true)
 
 The hour of the day also plays an important role when trying to predict crime rates. You can appreciate how 4:00 am - 5:00 am have the lowest crime rates. As we increase the hour, the crime rates increase on average until we reach 5:00 pm. After 6:00 pm, crime rates tend to decrease until 4:00 am where the cycle repeats. Although the hour of the day is relevant to the predictions of the model, I decided not to use it as a feature because the dataset would suffer a significant reduction because of many hours of the day that lack crime records. Additionally, having criminal records in a daily is consistent with the weather and football datasets.
+
+------
 
 
 
@@ -98,6 +110,8 @@ The hour of the day also plays an important role when trying to predict crime ra
 
 explain why not including category as feature
 
+------
+
 
 
 #### Crimes by Police Department District - Bar Chart
@@ -105,6 +119,8 @@ explain why not including category as feature
 ![crimes by police department](https://github.com/fescobar96/Crime-Prediction-in-San-Francisco/blob/master/images/crimes%20by%20police%20department.png?raw=true)
 
 target variable, explain it in detail
+
+------
 
 
 
@@ -118,6 +134,8 @@ target variable, explain it in detail
 
 add interactive plot
 
+------
+
 
 
 #### Crimes Resolutions
@@ -125,6 +143,8 @@ add interactive plot
 ![crime resolutions](https://github.com/fescobar96/Crime-Prediction-in-San-Francisco/blob/master/images/crime%20resolutions.png?raw=true)
 
 It is interesting to see how the majority of crimes ended up with 
+
+------
 
 
 
@@ -136,6 +156,8 @@ It is interesting to see how the majority of crimes ended up with
 
 From the correlation matrix above, we can easily determine that the average daily temperature (avg_temp) is the weather variable with the greatest absolute correlation to our target variable (Daily Crimes) and potentially the only weather variable that deserves to be further explored. All the other weather variables will be discarded from being features.
 
+------
+
 
 
 #### Mean Daily Crimes vs. Mean Daily Temperature
@@ -146,6 +168,8 @@ From the correlation matrix above, we can easily determine that the average dail
 
 explain correlation
 
+------
+
 
 
 #### Comparison of Crime Between NFL Game Day and Regular Day
@@ -153,6 +177,8 @@ explain correlation
 ![](https://github.com/fescobar96/Crime-Prediction-in-San-Francisco/blob/master/images/game%20day%20vs%20regular%20day.png?raw=true)
 
 explain possible reasons of this imbalance
+
+------
 
 
 
@@ -162,6 +188,8 @@ explain possible reasons of this imbalance
 
 not significant difference
 
+------
+
 
 
 #### Comparison of Crime Between NFL Win and Loss
@@ -169,6 +197,8 @@ not significant difference
 ![](https://github.com/fescobar96/Crime-Prediction-in-San-Francisco/blob/master/images/nfl%20win%20vs%20loss.png?raw=true)
 
 not significant difference
+
+------
 
 
 
@@ -180,12 +210,18 @@ regression, xgboost, talk about features
 
 talk about defining score metrics MAE and R^2, latex code of those definitions.
 
+------
+
+
+
 #### Scores before Hyperparameter Optimization
 
 | Subset   | R^2    |
 | -------- | ------ |
 | Training | 71.16% |
 | Test     | 68.86% |
+
+------
 
 
 
@@ -201,6 +237,8 @@ talk about hyperparameter optimization using gridsearchcv
 | gamma            | [0, 0.1, 0.2, 0.3, 0.4]              |
 | colsample_bytree | [0.3, 0.4, 0.5, 0.7]                 |
 
+------
+
 
 
 #### Best Hyperparameters
@@ -215,6 +253,8 @@ talk about hyperparameter optimization using gridsearchcv
 
 The table above shows the hyperparameters for our model after performing a grid search for 8 hours and 43 minutes. Please note that the best values were not extremes of the hyperparameters list of values, with *colsample_bytree* being the only exception. This indicates that we could possibly improve our model by experimenting with greater values for our hyperparameter *colsample_bytree*.
 
+------
+
 
 
 #### Scores after Hyperparameter Optimization
@@ -224,9 +264,15 @@ The table above shows the hyperparameters for our model after performing a grid 
 | Training | 76.78% |
 | Test     | 72.16% |
 
+------
+
 
 
 #### Mean Absolute Error
+
+error plot here
+
+------
 
 
 
@@ -250,14 +296,17 @@ It is also important to mention that crime prevention and criminality prevention
 
 
 
-## Conclusions
+## Future Works
+
+create dash with interactive map,
+
+change map from folium to plotly
+
+split by type of crime
 
 
 
 ## References
 
-```
-https://predpol.desk.com/customer/portal/articles/1429318-predpol-quick-overview-video 
-```
-
 cite references using appropriate format
+
