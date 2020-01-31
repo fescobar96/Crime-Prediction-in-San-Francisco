@@ -1,4 +1,4 @@
-# Crime Rates Prediction in San Francisco
+# Predicting Crime Rates in San Francisco
 
 ![](https://github.com/fescobar96/Crime-Prediction-in-San-Francisco/blob/master/images/time-lapse-video-San-Francisco.jpg?raw=true)
 
@@ -6,43 +6,11 @@
 
 ## Table of Contents
 
-[TOC]
+
 
 ## Introduction
 
 San Francisco's economy is continuously improving, but its wealth seems to be heavily undistributed; situation that has driven the crime rates higher than the nation average.
-
-
-
-
-## Libraries
-* BeautifulSoup 4.6.3
-
-* Branca 0.3.1
-
-* Folium 0.8.3
-
-* GeoPandas 0.6.2
-
-* Matplotlib 3.1.2
-
-* NumPy 1.17.5
-
-* Pandas 0.25.3
-
-* Requests 2.21.0
-
-* Scikit-learn 0.22.1
-
-* SciPy 1.4.1
-
-* Seaborn 0.9.0
-
-* Shapely 1.6.4
-
-* XGBoost 0.90
-
-  
 
 
 
@@ -96,11 +64,11 @@ The plot above represents the cumulative crimes per year. It is important to men
 
 
 
-####  Mean Daily Crimes vs. Day of Month
+####  Average Daily Crimes vs. Day of Month
 
 ![](https://github.com/fescobar96/Crime-Prediction-in-San-Francisco/blob/master/images/daily%20crimes%20vs%20day%20of%20month.png?raw=true)
 
-Explain relationship with wellfare and ss checks...
+During the EDA, an interesting finding was that the first day tends to have crime rates xx% higher than the month average. The reason behind this pattern could be something as simple as this being the way in which police in San Francisco file crime reports. Other possible reason could be that the U.S. government tends to pay Supplemental Security Income and Welfare checks on the first day of every month, potentially increasing the number of robbery targets.
 
 
 
@@ -162,7 +130,7 @@ explain why discarded this as a feature
 
 
 
-explain main correlation with avg_temp, possible theories?
+From the correlation matrix above, we can easily determine that the average daily temperature (avg_temp) is the weather variable with the greatest absolute correlation to our target variable (Daily Crimes) and potentially the only weather variable that deserves to be further explored. All the other weather variables will be discarded from being features.
 
 
 
@@ -208,6 +176,15 @@ regression, xgboost, talk about features
 
 
 
+#### Scores before Hyperparameter Optimization
+
+| Subset   | R^2    |
+| -------- | ------ |
+| Training | 71.16% |
+| Test     | 68.86% |
+
+
+
 #### Hyperparameter Optimization
 
 talk about hyperparameter optimization using gridsearchcv
@@ -222,12 +199,24 @@ talk about hyperparameter optimization using gridsearchcv
 
 
 
-#### Score
+#### Best Hyperparameters **Fix
 
-| Dataset  | R^2 |
-|----------|-----|
-| Training | ??  |
-| Test     | ??  |
+| Parameters       | List of Values                       |
+| ---------------- | ------------------------------------ |
+| learning_rate    | [0.05, 0.10, 0.15, 0.20, 0.25, 0.30] |
+| max_depth        | [3, 4, 5, 6, 8, 10, 12, 15]          |
+| min_child_weight | [1, 3, 5, 7]                         |
+| gamma            | [0, 0.1, 0.2, 0.3, 0.4]              |
+| colsample_bytree | [0.3, 0.4, 0.5, 0.7]                 |
+
+
+
+#### Scores after Hyperparameter Optimization
+
+| Subset   | R^2    |
+| -------- | ------ |
+| Training | 76.78% |
+| Test     | 72.16% |
 
 
 
@@ -247,8 +236,22 @@ Expand on following issues:
 
 #### Crime displacement
 
+Crime displacement refers to crime being pushed into other neighborhoods. According to PredPol's Chief of Research and Development Dr. Jeffrey Brantingham, some offenders tend to desist for a time if you increase police presence in their preferred locations to commit crimes.
+
+It is also important to mention that crime prevention and criminality prevention are two different concepts. Let's take for example a drug addict that steals to be able to keep up with his drug consumption habits; if you prevent that person from 
+
 #### Privacy and constitutional concerns
 
 
 
 ## Conclusions
+
+
+
+## References
+
+```
+https://predpol.desk.com/customer/portal/articles/1429318-predpol-quick-overview-video 
+```
+
+cite references using appropriate format
