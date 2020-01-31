@@ -132,7 +132,7 @@ It is interesting to see the distribution of crime resolutions. Unfortunately, w
 
 
 
-From the correlation matrix above, we can easily determine that the average daily temperature (avg_temp) is the weather variable with the greatest absolute correlation to our target variable (Daily Crimes) and potentially the only weather variable that deserves to be further explored. All the other weather variables will be discarded from being features.
+From the correlation matrix above, we can quickly determine that the average daily temperature (avg_temp) is the weather variable with the highest absolute correlation to our target variable (Daily Crimes) and potentially the only weather variable that deserves to be further explored. All the other weather variables were discarded from being features.
 
 ------
 
@@ -174,7 +174,9 @@ not significant difference
 
 #### Model
 
-regression, xgboost, talk about features
+*XGBoost* is a gradient boosting algorithm that tends to perform better than most stand-alone ensemble algorithms, and it requires minimum data preprocessing. Unlike *random forest* that works by creating decision trees parallelly, *XGBoost* sequentially creates decision trees and tries to minimize errors through gradient descent.
+
+
 
 talk about defining score metrics MAE and R^2, latex code of those definitions.
 
@@ -191,7 +193,7 @@ talk about defining score metrics MAE and R^2, latex code of those definitions.
 
 #### Hyperparameter Optimization
 
-talk about hyperparameter optimization using gridsearchcv
+To improve our scores, it is crucial to tweak those variables that rule the model's training process: the hyperparameters. *GridSearchCV* lets us train and test a machine learning model by using different combinations of hyperparameters. From my experience, only a few hyperparameters tend to dominate a model's behavior. In the following table, you'll find the hyperparameters that I optimized and the different values that I tried for each of them.
 
 | Hyperparameters  | List of Values                       |
 | ---------------- | ------------------------------------ |
@@ -213,7 +215,7 @@ talk about hyperparameter optimization using gridsearchcv
 | gamma            | 0.2    |
 | colsample_bytree | 0.7    |
 
-The table above shows the hyperparameters for our model after performing a grid search for 8 hours and 43 minutes. Please note that the best values were not extremes of the hyperparameters list of values, with *colsample_bytree* being the only exception. This indicates that we could possibly improve our model by experimenting with greater values for our hyperparameter *colsample_bytree*.
+The table above shows the hyperparameters for our model after performing a grid search for 8 hours and 43 minutes. Please note that the best values were not extremes of the hyperparameters list of values, with *colsample_bytree* being the only exception. This indicates that we could improve our model by experimenting with higher values for our hyperparameter *colsample_bytree*.
 
 ------
 
@@ -232,6 +234,14 @@ error plot here
 
 ------
 
+#### Feature Importance
+
+feature importance plot here
+
+check for VIF, multicollinearity is an issue for inference
+
+------
+
 ## Limitations and Issues
 
 Expand on following issues:
@@ -243,10 +253,6 @@ Expand on following issues:
 #### Neighborhood bias
 
 #### Crime displacement
-
-Crime displacement refers to crime being pushed into other neighborhoods. According to PredPol's Chief of Research and Development Dr. Jeffrey Brantingham, some offenders tend to desist for a time if you increase police presence in their preferred locations to commit crimes.
-
-It is also important to mention that crime prevention and criminality prevention are two different concepts. Let's take for example a drug addict that steals to be able to keep up with his drug consumption habits; if you prevent that person from...
 
 #### Privacy and constitutional concerns
 
@@ -262,7 +268,7 @@ split by type of crime
 
 use arima to fix yearly crimes plot
 
-
+normalize plots
 
 ## References
 
