@@ -18,8 +18,6 @@ The final model implements the most predictive features from 3 different dataset
 
 ------
 
-
-
 ## Data Overview
 
 - **`San Francisco Crime Classification Dataset`** - This dataset contains the reported crimes that occurred in San Francisco from *01/01/2003* to *05/13/2015*. It has *878,049* records.
@@ -60,8 +58,6 @@ Source: Collected from https://www.pro-football-reference.com/
 
 ------
 
-
-
 ## Exploratory Data Analysis
 
 #### Crimes per Year
@@ -72,8 +68,6 @@ The plot above represents the cumulative crimes per year. It is essential to men
 
 ------
 
-
-
 ####  Average Daily Crimes vs. Day of Month
 
 ![](https://github.com/fescobar96/Crime-Prediction-in-San-Francisco/blob/master/images/daily%20crimes%20vs%20day%20of%20month.png?raw=true)
@@ -81,8 +75,6 @@ The plot above represents the cumulative crimes per year. It is essential to men
 During the exploratory data analysis, an interesting finding was that the first day tends to have crime rates xx% higher than the monthly average. The reason behind this pattern could be something as simple as this being how police in San Francisco file crime reports. Another possible cause could be that the U.S. government tends to pay Supplemental Security Income and Welfare checks on the first day of every month, potentially increasing the number of robbery targets.
 
 ------
-
-
 
 #### Crimes by Day of the Week
 
@@ -92,8 +84,6 @@ Crimes rates vary between days of the week, being Friday the day in which most c
 
 ------
 
-
-
 #### Average Crimes per Hour
 
 ![crimes per hour](https://github.com/fescobar96/Crime-Prediction-in-San-Francisco/blob/master/images/crimes%20per%20hour.png?raw=true)
@@ -102,27 +92,21 @@ The hour of the day also plays an important role when trying to predict crime ra
 
 ------
 
-
-
 #### Crimes by Category
 
 ![crimes by category](https://github.com/fescobar96/Crime-Prediction-in-San-Francisco/blob/master/images/crimes%20by%20category.png?raw=true)
 
-explain why not including category as feature
+From the plot above, it was evident that larceny and theft lead as the most common crimes in San Francisco. For this project, I decided not to include the crime category as a feature in the machine learning model. However, I consider that this could be a useful future implementation that could help law enforcement make better decisions regarding the distribution of police officers based on the severity of the predicted crimes.
 
 ------
-
-
 
 #### Crimes by Police Department District - Bar Chart
 
 ![crimes by police department](https://github.com/fescobar96/Crime-Prediction-in-San-Francisco/blob/master/images/crimes%20by%20police%20department.png?raw=true)
 
-target variable, explain it in detail
+It is expected for crimes not to be evenly distributed across different police department districts, especially taking into consideration that the area of these districts varies in shape and size. The plot above clearly highlights the crime distribution, and it tells us that some police department districts need more resources than others. The machine learning model uses the police department district to predict the crime rates for each zone as they vary significantly between areas.
 
 ------
-
-
 
 #### Crimes by Police Department District - Map
 
@@ -130,23 +114,17 @@ target variable, explain it in detail
 
 The plot above is a visual representation of the crime count for each Police Department District in San Francisco where the darker colors denote a greater crime count.
 
-target variable, explain it in detail
-
 add interactive plot
 
 ------
-
-
 
 #### Crimes Resolutions
 
 ![crime resolutions](https://github.com/fescobar96/Crime-Prediction-in-San-Francisco/blob/master/images/crime%20resolutions.png?raw=true)
 
-It is interesting to see how the majority of crimes ended up with 
+It is interesting to see the distribution of crime resolutions. Unfortunately, when trying to predict the crime rates, the resolutions are not available before a crime occurs. For the previously mentioned reason, I decided to exclude the resolution of the crimes as a feature for the machine learning model.
 
 ------
-
-
 
 #### Correlation Matrix
 
@@ -158,8 +136,6 @@ From the correlation matrix above, we can easily determine that the average dail
 
 ------
 
-
-
 #### Mean Daily Crimes vs. Mean Daily Temperature
 
 ![](https://github.com/fescobar96/Crime-Prediction-in-San-Francisco/blob/master/images/daily%20crimes%20vs%20temperature.png?raw=true)
@@ -170,8 +146,6 @@ explain correlation
 
 ------
 
-
-
 #### Comparison of Crime Between NFL Game Day and Regular Day
 
 ![](https://github.com/fescobar96/Crime-Prediction-in-San-Francisco/blob/master/images/game%20day%20vs%20regular%20day.png?raw=true)
@@ -179,8 +153,6 @@ explain correlation
 explain possible reasons of this imbalance
 
 ------
-
-
 
 #### Comparison of Crime Between NFL Home Game and Away Game
 
@@ -190,8 +162,6 @@ not significant difference
 
 ------
 
-
-
 #### Comparison of Crime Between NFL Win and Loss
 
 ![](https://github.com/fescobar96/Crime-Prediction-in-San-Francisco/blob/master/images/nfl%20win%20vs%20loss.png?raw=true)
@@ -199,8 +169,6 @@ not significant difference
 not significant difference
 
 ------
-
-
 
 ## Machine Learning
 
@@ -212,8 +180,6 @@ talk about defining score metrics MAE and R^2, latex code of those definitions.
 
 ------
 
-
-
 #### Scores before Hyperparameter Optimization
 
 | Subset   | R^2    |
@@ -222,8 +188,6 @@ talk about defining score metrics MAE and R^2, latex code of those definitions.
 | Test     | 68.86% |
 
 ------
-
-
 
 #### Hyperparameter Optimization
 
@@ -239,8 +203,6 @@ talk about hyperparameter optimization using gridsearchcv
 
 ------
 
-
-
 #### Best Hyperparameters
 
 | Hyperparameters  | Values |
@@ -255,8 +217,6 @@ The table above shows the hyperparameters for our model after performing a grid 
 
 ------
 
-
-
 #### Scores after Hyperparameter Optimization
 
 | Subset   | R^2    |
@@ -266,15 +226,11 @@ The table above shows the hyperparameters for our model after performing a grid 
 
 ------
 
-
-
 #### Mean Absolute Error
 
 error plot here
 
 ------
-
-
 
 ## Limitations and Issues
 
@@ -290,7 +246,7 @@ Expand on following issues:
 
 Crime displacement refers to crime being pushed into other neighborhoods. According to PredPol's Chief of Research and Development Dr. Jeffrey Brantingham, some offenders tend to desist for a time if you increase police presence in their preferred locations to commit crimes.
 
-It is also important to mention that crime prevention and criminality prevention are two different concepts. Let's take for example a drug addict that steals to be able to keep up with his drug consumption habits; if you prevent that person from 
+It is also important to mention that crime prevention and criminality prevention are two different concepts. Let's take for example a drug addict that steals to be able to keep up with his drug consumption habits; if you prevent that person from...
 
 #### Privacy and constitutional concerns
 
@@ -303,6 +259,8 @@ create dash with interactive map,
 change map from folium to plotly
 
 split by type of crime
+
+use arima to fix yearly crimes plot
 
 
 
