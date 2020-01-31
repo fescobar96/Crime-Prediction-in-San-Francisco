@@ -10,7 +10,11 @@
 
 ## Introduction
 
-San Francisco's economy is continuously improving, but its wealth seems to be heavily undistributed; situation that has driven the crime rates higher than the nation average.
+San Francisco's economy is continuously growing, but its wealth seems to be heavily undistributed, a situation that has driven the crime rates higher than the national average. If the number of police officers is not enough to decrease crime rates in San Francisco, what should law enforcement do to prevent high crime rates?
+
+Law enforcement in San Francisco is facing an optimization problem where it has relatively few resources to take care of a big area. The purpose of this project is to build machine learning models that can aid law enforcement in better distributing the resources across different police department districts.
+
+The final model implements the most predictive features from 3 different datasets with the primary objective of predicting the number of crimes for each police department district in San Francisco for any given date. 
 
 
 
@@ -44,7 +48,7 @@ Source: Scraped from https://wunderground.com/
 
 
 
-**`San Francisco 49ers Game Schedule`** - Collected data for San Francisco 49ers game between seasons *2003* and *2014*. The schedule for *Season 2015* was not include because it starts in Fall and the *San Francisco Crime Classification Dataset* ends in *05/13/2015*. It contains 200 records.
+**`San Francisco 49ers Game Schedule`** - Collected data for the San Francisco 49ers game between seasons *2003* and *2014*. The schedule for *Season 2015* was not included because it starts in Fall, and the *San Francisco Crime Classification Dataset* ends on *05/13/2015*. It contains 200 records.
 
 - **`Date`** - Date of game
 - **`Output`** - Whether the 49ers won or lost the game ("W", "L")
@@ -60,7 +64,7 @@ Source: Collected from https://www.pro-football-reference.com/
 
 ![crimes per year](https://github.com/fescobar96/Crime-Prediction-in-San-Francisco/blob/master/images/crimes%20per%20year.png?raw=true)
 
-The plot above represents the cumulative crimes per year. It is important to mention that the San Francisco Crime Classification Dataset only included crime records up to May 13, 2015; this is why the yearly crime rate seems to suddenly improved in 2015, when in reality we are just missing data for most of that year.
+The plot above represents the cumulative crimes per year. It is essential to mention that the San Francisco Crime Classification Dataset only included crime records up to May 13, 2015; this is why the yearly crime rate seems to suddenly improve in 2015 when in reality, we are just missing data for most of that year.
 
 
 
@@ -68,7 +72,7 @@ The plot above represents the cumulative crimes per year. It is important to men
 
 ![](https://github.com/fescobar96/Crime-Prediction-in-San-Francisco/blob/master/images/daily%20crimes%20vs%20day%20of%20month.png?raw=true)
 
-During the EDA, an interesting finding was that the first day tends to have crime rates xx% higher than the month average. The reason behind this pattern could be something as simple as this being the way in which police in San Francisco file crime reports. Other possible reason could be that the U.S. government tends to pay Supplemental Security Income and Welfare checks on the first day of every month, potentially increasing the number of robbery targets.
+During the exploratory data analysis, an interesting finding was that the first day tends to have crime rates xx% higher than the monthly average. The reason behind this pattern could be something as simple as this being how police in San Francisco file crime reports. Another possible cause could be that the U.S. government tends to pay Supplemental Security Income and Welfare checks on the first day of every month, potentially increasing the number of robbery targets.
 
 
 
@@ -76,7 +80,7 @@ During the EDA, an interesting finding was that the first day tends to have crim
 
 ![crimes by day of the week](https://github.com/fescobar96/Crime-Prediction-in-San-Francisco/blob/master/images/crimes%20by%20day%20of%20the%20week.png?raw=true)
 
-Crimes rates vary between days of the week, being Friday the day in which most crimes are committed on average while Sunday has the lowest crime rates of all days of the week. Please note that although the variations of crime rates between different days of the week seems to be relatively small, the day of the week plays an important role in improving our model's accuracy.
+Crimes rates vary between days of the week, being Friday the day in which most crimes are committed on average while Sunday has the lowest crime rates of all days of the week. Please note that although the variations of crime rates between different days of the week seem to be relatively small, the day of the week plays a vital role in improving our model's accuracy.
 
 
 
@@ -84,7 +88,7 @@ Crimes rates vary between days of the week, being Friday the day in which most c
 
 ![crimes per hour](https://github.com/fescobar96/Crime-Prediction-in-San-Francisco/blob/master/images/crimes%20per%20hour.png?raw=true)
 
-The hour of the day also plays an important role when trying to predict crimes rates. You can appreciate how 4:00am - 5:00am have the lowest crime rates. As we increase the hour, the crime rates increase on average until we reach 5:00pm. After 6:00pm, crime rates tend to decrease until 4:00am where the cycle repeats. Although the hour of the day is relevant to the predictions of the model, I decided not to use it as a feature because the dataset would suffer a significant reduction due to the fact that many hours of the day lack crime records. Additionally, having the crime records in a daily is consistent with the weather and football datasets.
+The hour of the day also plays an important role when trying to predict crime rates. You can appreciate how 4:00 am - 5:00 am have the lowest crime rates. As we increase the hour, the crime rates increase on average until we reach 5:00 pm. After 6:00 pm, crime rates tend to decrease until 4:00 am where the cycle repeats. Although the hour of the day is relevant to the predictions of the model, I decided not to use it as a feature because the dataset would suffer a significant reduction because of many hours of the day that lack crime records. Additionally, having criminal records in a daily is consistent with the weather and football datasets.
 
 
 
