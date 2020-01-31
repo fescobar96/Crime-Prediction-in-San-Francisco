@@ -1,6 +1,6 @@
 # Predicting Crime Rates in San Francisco
 
-![](https://github.com/fescobar96/Crime-Prediction-in-San-Francisco/blob/master/images/time-lapse-video-San-Francisco.jpg?raw=true)
+![](https://github.com/fescobar96/Crime-Prediction-in-San-Francisco/blob/master/images/2015%20Crime%20Heatmap.gif?raw=true)
 
 
 
@@ -124,7 +124,7 @@ add interactive plot
 
 ![crime resolutions](https://github.com/fescobar96/Crime-Prediction-in-San-Francisco/blob/master/images/crime%20resolutions.png?raw=true)
 
-explain why discarded this as a feature
+It is interesting to see how the majority of crimes ended up with 
 
 
 
@@ -178,7 +178,7 @@ not significant difference
 
 regression, xgboost, talk about features
 
-
+talk about defining score metrics MAE and R^2, latex code of those definitions.
 
 #### Scores before Hyperparameter Optimization
 
@@ -193,7 +193,7 @@ regression, xgboost, talk about features
 
 talk about hyperparameter optimization using gridsearchcv
 
-| Parameters       | List of Values                       |
+| Hyperparameters  | List of Values                       |
 | ---------------- | ------------------------------------ |
 | learning_rate    | [0.05, 0.10, 0.15, 0.20, 0.25, 0.30] |
 | max_depth        | [3, 4, 5, 6, 8, 10, 12, 15]          |
@@ -203,15 +203,17 @@ talk about hyperparameter optimization using gridsearchcv
 
 
 
-#### Best Hyperparameters **Fix
+#### Best Hyperparameters
 
-| Parameters       | List of Values                       |
-| ---------------- | ------------------------------------ |
-| learning_rate    | [0.05, 0.10, 0.15, 0.20, 0.25, 0.30] |
-| max_depth        | [3, 4, 5, 6, 8, 10, 12, 15]          |
-| min_child_weight | [1, 3, 5, 7]                         |
-| gamma            | [0, 0.1, 0.2, 0.3, 0.4]              |
-| colsample_bytree | [0.3, 0.4, 0.5, 0.7]                 |
+| Hyperparameters  | Values |
+| ---------------- | ------ |
+| learning_rate    | 0.20   |
+| max_depth        | 5      |
+| min_child_weight | 3      |
+| gamma            | 0.2    |
+| colsample_bytree | 0.7    |
+
+The table above shows the hyperparameters for our model after performing a grid search for 8 hours and 43 minutes. Please note that the best values were not extremes of the hyperparameters list of values, with *colsample_bytree* being the only exception. This indicates that we could possibly improve our model by experimenting with greater values for our hyperparameter *colsample_bytree*.
 
 
 
