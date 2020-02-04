@@ -22,12 +22,29 @@ day = date.day
 response = requests.get("https://api.wunderground.com/history/airport/KSFO/" + str(year) + "/" + str(month) + "/" + str(day) + "/DailyHistory.html")
 if(response.ok):
     data = response.text
-    soup = BeautifulSoup(data)
+    soup = BeautifulSoup(data, features='lxml')
     values = soup.find_all("span", class_="wx-value")
     values = [x.get_text() for x in values]
     avg_temp = values[0]
 
 #Get day of week automatically
+wd = date.weekday()
+week = [0,0,0,0,0,0]
+
+if wd == 1:
+    week[0] = 1
+elif wd == 2:
+    week[1] = 1
+elif wd == 3:
+    week[2] = 1
+elif wd == 4:
+    week[3] = 1
+elif wd == 5:
+    week[4] = 1
+elif wd == 6:
+    week[5] = 1
+
+
 
 #Loop for all PdDistricts
 
@@ -46,12 +63,12 @@ data = { 'avg_temp': int(avg_temp),
          'PdDistrict_SOUTHERN': 0,
          'PdDistrict_TARAVAL': 0,
          'PdDistrict_TENDERLOIN': 0,
-         'DayOfWeek_Monday': 1,
-         'DayOfWeek_Saturday': 0,
-         'DayOfWeek_Sunday': 0,
-         'DayOfWeek_Thursday': 0,
-         'DayOfWeek_Tuesday': 0,
-         'DayOfWeek_Wednesday': 0,
+         'DayOfWeek_Monday': week[0],
+         'DayOfWeek_Saturday': week[4],
+         'DayOfWeek_Sunday': week[5],
+         'DayOfWeek_Thursday': week[3],
+         'DayOfWeek_Tuesday': week[1],
+         'DayOfWeek_Wednesday': week[2],
          'NFL_Game_Day_1': 0,
          }
 
