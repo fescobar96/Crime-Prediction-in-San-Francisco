@@ -4,10 +4,6 @@
 
 
 
-## Table of Contents
-
-table of contents here
-
 ## Introduction
 
 San Francisco's economy is continuously growing, but its wealth seems to be heavily undistributed, a situation that has driven the crime rates higher than the national average. If the number of police officers is not enough to decrease crime rates in San Francisco, what should law enforcement do to prevent high crime rates?
@@ -114,8 +110,6 @@ It is expected for crimes not to be evenly distributed across different police d
 
 The plot above is a visual representation of the crime count for each Police Department District in San Francisco where the darker colors denote a greater crime count.
 
-add interactive plot
-
 ------
 
 #### Crimes Resolutions
@@ -140,9 +134,7 @@ From the correlation matrix above, we can quickly determine that the average dai
 
 ![](https://github.com/fescobar96/Crime-Prediction-in-San-Francisco/blob/master/images/daily%20crimes%20vs%20temperature.png?raw=true)
 
-
-
-explain correlation
+The plot above depicts a correlation between the average daily crimes and the average daily temperature. It is evident that as temperature increases, so does crime.
 
 ------
 
@@ -150,7 +142,7 @@ explain correlation
 
 ![](https://github.com/fescobar96/Crime-Prediction-in-San-Francisco/blob/master/images/game%20day%20vs%20regular%20day.png?raw=true)
 
-explain possible reasons of this imbalance
+Most of the crime reports happen to be in a day when the San Francisco 49ers don't play. This could be due to the way in which police reports are filed, maybe most police officers wait until the next day to file reports, or most people don't commit crimes during game day, or most people don't report crimes during game days.
 
 ------
 
@@ -158,7 +150,7 @@ explain possible reasons of this imbalance
 
 ![](https://github.com/fescobar96/Crime-Prediction-in-San-Francisco/blob/master/images/home%20game%20vs%20away%20game.png?raw=true)
 
-not significant difference
+Crime rates seem to remain the same between those days in which the 49ers play home and those days in which they play away.
 
 ------
 
@@ -166,7 +158,7 @@ not significant difference
 
 ![](https://github.com/fescobar96/Crime-Prediction-in-San-Francisco/blob/master/images/nfl%20win%20vs%20loss.png?raw=true)
 
-not significant difference
+Once again, there doesn't seem to be any difference in the crime rates if the San Francisco 49ers either lose or win a game.
 
 ------
 
@@ -175,10 +167,6 @@ not significant difference
 #### Model
 
 *XGBoost* is a gradient boosting algorithm that tends to perform better than most stand-alone ensemble algorithms, and it requires minimum data preprocessing. Unlike *random forest* that works by creating decision trees parallelly, *XGBoost* sequentially creates decision trees and tries to minimize errors through gradient descent.
-
-
-
-talk about defining score metrics MAE and R^2, latex code of those definitions.
 
 ------
 
@@ -225,5 +213,3 @@ The table above shows the hyperparameters for our model after performing a grid 
 | -------- | ------ |
 | Training | 76.78% |
 | Test     | 72.16% |
-
-## Future Works
