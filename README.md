@@ -18,14 +18,14 @@ The final model implements the most predictive features from 3 different dataset
 
 - **`San Francisco Crime Classification Dataset`** - This dataset contains the reported crimes that occurred in San Francisco from *01/01/2003* to *05/13/2015*. It has *878,049* records.
 - **`Date & Time`** - Timestamp of the crime incident
-  - **`Category`** - Category of the crime incident
+- **`Category`** - Category of the crime incident
 - **`Description`** - Detailed description of the crime incident
-  - **`Day of the Week`** - The day of the week
-  - **`Police Department District`** - Name of the Police Department District
-  - **`Resolution`** - How the crime incident was resolved
-  - **`Address`** - The approximate street address of the crime incident
-  - **`X`** - Longitude
-  - **`Y`** - Latitude
+- **`Day of the Week`** - The day of the week
+- **`Police Department District`** - Name of the Police Department District
+- **`Resolution`** - How the crime incident was resolved
+- **`Address`** - The approximate street address of the crime incident
+- **`X`** - Longitude
+- **`Y`** - Latitude
 
 Source: https://www.kaggle.com/c/sf-crime/data
 
